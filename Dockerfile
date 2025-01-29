@@ -3,7 +3,7 @@ FROM node:23-alpine3.20
 # Set working directory
 WORKDIR /src
 
-EXPOSE 8080
+EXPOSE 3000
 
 # Copy package.json and package-lock.json first to install dependencies
 COPY package*.json /src/
