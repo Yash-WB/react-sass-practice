@@ -1,0 +1,206 @@
+@use "sass:map";
+
+$primary-color: #3dcd58;
+$primary-gray: #f3f2f2;
+$button-gray: #626469;
+$border-gray: #cfcfcf;
+
+$breakdown-tablet: 1024px;
+$breakdown-mobile: 319px;
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+
+  .navbarTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-gray;
+    border-bottom: 1px solid $border-gray;
+
+    @media (max-width: $breakdown-tablet) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      @media (max-width: $breakdown-tablet) {
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .logo {
+        background-color: $primary-color;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+
+        @media (max-width: $breakdown-tablet) {
+          padding: 10px;
+        }
+
+        img {
+          width: auto;
+
+          @media (max-width: $breakdown-mobile) {
+            height: 100px;
+          }
+        }
+      }
+
+      .searchBox {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        input {
+          padding: 10px;
+          width: 768px;
+
+          @media (max-width: $breakdown-tablet) {
+            display: none;
+          }
+        }
+
+        button {
+          padding: 6px;
+          background-color: $button-gray;
+          color: white;
+          border: none;
+          cursor: pointer;
+
+          @media (max-width: $breakdown-tablet) {
+            background-color: transparent;
+          }
+        }
+      }
+
+      .hamburger {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+
+        @media (max-width: $breakdown-tablet) {
+          display: block;
+        }
+      }
+    }
+
+    .right img {
+      height: 50px;
+      margin-right: 50px;
+
+      @media (max-width: $breakdown-tablet) {
+        display: none;
+      }
+    }
+  }
+
+  .navbarBottom {
+    background-color: $primary-gray;
+    padding: 10px 0;
+
+    @media (max-width: $breakdown-tablet) {
+      padding: 0;
+      display: none; // Hidden unless toggled open
+    }
+
+    &.show {
+      display: block; // Display the navbar when the menu is toggled
+    }
+
+    .dropdowns {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      @media (max-width: $breakdown-tablet) {
+        flex-direction: column;
+        background-color: white;
+        z-index: 10;
+      }
+
+      .dropdown1 {
+        position: relative;
+        margin-left: 20px;
+
+        @media (max-width: $breakdown-tablet) {
+          margin-left: 0;
+          margin-bottom: 20px;
+        }
+
+        button {
+          margin-left: 20px;
+          background-color: transparent;
+          border: none;
+          font-size: 16px;
+          cursor: pointer;
+          color: #333;
+
+          @media (max-width: $breakdown-tablet) {
+            font-size: 20px;
+            margin-left: 10px;
+          }
+
+          @media (max-width: $breakdown-mobile) {
+            font-size: 14px;
+            margin-left: 5px;
+          }
+        }
+
+        .dropdownContent1 {
+          display: none;
+          position: absolute;
+          background-color: white;
+          max-width: 150px;
+          z-index: 10;
+
+          @media (max-width: $breakdown-mobile) {
+            max-width: 100vw;
+          }
+
+          a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+
+            &:hover {
+              background-color: #f1f1f1;
+            }
+
+            @media (max-width: $breakdown-mobile) {
+              padding: 12px;
+            }
+          }
+        }
+
+        &.show .dropdownContent1 {
+          display: block;
+        }
+
+        .arrow {
+          margin-left: 10px;
+          transition: transform 0.3s ease;
+
+          &.up {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,134 @@
+$primary-color: #3dcd58;
+$primary-gray: #f3f2f2;
+$button-gray: #626469;
+$border-gray: #cfcfcf;
+$dark-green: #008a16;
+
+$breakdown-tablet: 1024px;
+$breakdown-mobile: 320px;
+
+.hero {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 70vh;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://www.se.com/ww/en/assets/v2/564/media/503576/100%20Global%20and%20times-global-en-404-IC-1920x540.jpg");
+
+  @media (max-width: $breakdown-tablet) {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.hero .main {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.72);
+  border-radius: 16px;
+  margin-left: 130px;
+  padding: 30px;
+  color: white;
+  max-width: 55%;
+  max-height: 90%;
+
+  @media (max-width: $breakdown-tablet) {
+    background-color: transparent;
+    padding: 20px;
+    margin-left: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width) {
+    
+  }
+}
+
+.hero .main h2 {
+  font-size: 36px;
+  margin: 0;
+
+  @media (max-width: $breakdown-tablet) {
+    font-size: 28px;
+  }
+
+  @media (max-width: $breakdown-mobile) {
+    font-size: 22px;
+  }
+}
+
+.hero .main .paragraphs {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (max-width: $breakdown-tablet) {
+    gap: 5px;
+    display: none;
+  }
+
+  @media (max-width: $breakdown-mobile) {
+    display: none;
+  }
+}
+
+.hero .main .paragraphs p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin: 0;
+
+  @media (max-width: $breakdown-tablet) {
+    font-size: 16px;
+  }
+}
+
+.hero .main .buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 20px;
+
+  @media (max-width: $breakdown-tablet) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.buttons .button1,
+.buttons .button2 {
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  @media (max-width: $breakdown-tablet) {
+    font-size: 14px;
+  }
+}
+
+.buttons .button1 {
+  background-color: $dark-green;
+  color: white;
+  border: none;
+
+  &:hover{
+    background-color: #2c9740;
+  }
+}
+
+.buttons .button2 {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  &:hover{
+    box-shadow: inset 0px 1px 5px #ffffff;
+  }
+}
