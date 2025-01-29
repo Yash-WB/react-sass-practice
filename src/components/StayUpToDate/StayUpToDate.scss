@@ -6,7 +6,6 @@ $button-gray: #626469;
 $border-gray: #cfcfcf;
 
 $breakdown-tablet: 1024px;
-$breakdown-mobile: 768px;
 $breakdown-small: 480px;
 
 .StayUpToDate {
@@ -17,7 +16,7 @@ $breakdown-small: 480px;
 
   h1{
     font-size: 48px;
-    @media (max-width: $breakdown-mobile) {
+    @media (max-width: $breakdown-tablet) {
         font-size: 32px;
       }
   }
@@ -26,7 +25,7 @@ $breakdown-small: 480px;
   .tabs {
     padding: 0px 100px;
 
-    @media (max-width: $breakdown-mobile) {
+    @media (max-width: $breakdown-tablet) {
       padding: 0 20px;
       text-align: center;
     }
@@ -41,7 +40,7 @@ $breakdown-small: 480px;
     padding: 0;
     margin-left: 100px;
 
-    @media (max-width: $breakdown-mobile) {
+    @media (max-width: $breakdown-tablet) {
       flex-wrap: wrap;
       justify-content: center;
       margin-left: 0;
@@ -68,7 +67,7 @@ $breakdown-small: 480px;
         background-color: $primary-gray;
       }
 
-      @media (max-width: $breakdown-mobile) {
+      @media (max-width: $breakdown-tablet) {
         font-size: 18px;
       }
 
@@ -84,7 +83,7 @@ $breakdown-small: 480px;
     flex-direction: row;
     background-color: white;
 
-    @media (max-width: $breakdown-mobile) {
+    @media (max-width: $breakdown-tablet) {
       flex-direction: column-reverse;
     }
 
@@ -95,7 +94,7 @@ $breakdown-small: 480px;
       align-items: start;
       padding: 50px;
 
-      @media (max-width: $breakdown-mobile) {
+      @media (max-width: $breakdown-tablet) {
         padding: 20px;
         text-align: center;
         align-items: center;
@@ -133,7 +132,7 @@ $breakdown-small: 480px;
           margin-right: 0;
         }
 
-        @media (max-width: $breakdown-mobile) {
+        @media (max-width: $breakdown-tablet) {
           width: 100%;
           margin: 20px 0;
         }

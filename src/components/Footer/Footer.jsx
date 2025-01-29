@@ -16,6 +16,7 @@ const Footer = () => {
           <a href="#" className="mainLink">
             Careers
           </a>
+          <hr />
           <a href="#" className="mainLink">
             Company
           </a>
@@ -28,6 +29,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="links">
+        <hr />
           <a href="#" className="mainLink">
             Careers
           </a>
@@ -40,6 +42,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="links">
+        <hr />
           <a href="#" className="mainLink">
             Careers
           </a>
@@ -52,6 +55,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="links">
+        <hr />
           <a href="#" className="mainLink">
             Careers
           </a>
@@ -64,15 +68,19 @@ const Footer = () => {
           </div>
         </div>
         <div className="links">
+        <hr />
           <a href="#" className="mainLink">
             Careers
           </a>
+          <hr />
           <a href="#" className="mainLink">
             Careers
           </a>
+          <hr />
           <a href="#" className="mainLink">
             Company
           </a>
+          <hr />
         </div>
       </div>
       <div className="bottom">

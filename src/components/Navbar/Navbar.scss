@@ -6,7 +6,7 @@ $button-gray: #626469;
 $border-gray: #cfcfcf;
 
 $breakdown-tablet: 1024px;
-$breakdown-mobile: 319px;
+$breakdown-mobile: 320px;
 
 .navbar {
   display: flex;
@@ -18,21 +18,18 @@ $breakdown-mobile: 319px;
     align-items: center;
     background-color: $primary-gray;
     border-bottom: 1px solid $border-gray;
+    position: relative;
 
     @media (max-width: $breakdown-tablet) {
-      flex-direction: column;
-      align-items: stretch;
+      flex-direction: row;
+      align-items: center;
     }
 
     .left {
       display: flex;
       align-items: center;
-      gap: 50px;
-
-      @media (max-width: $breakdown-tablet) {
-        justify-content: space-between;
-        width: 100%;
-      }
+      width: 100%;
+      justify-content: space-between; 
 
       .logo {
         background-color: $primary-color;
@@ -42,28 +39,24 @@ $breakdown-mobile: 319px;
         justify-content: center;
         height: 50px;
 
-        @media (max-width: $breakdown-tablet) {
-          padding: 10px;
-        }
-
         img {
           width: auto;
 
           @media (max-width: $breakdown-mobile) {
-            height: 100px;
+            width:150px ;
           }
         }
       }
 
       .searchBox {
+        flex-grow: 1;
+        margin-left: 20px;
         display: flex;
         align-items: center;
-        margin-left: auto;
 
         input {
           padding: 10px;
           width: 768px;
-
           @media (max-width: $breakdown-tablet) {
             display: none;
           }
@@ -78,6 +71,9 @@ $breakdown-mobile: 319px;
 
           @media (max-width: $breakdown-tablet) {
             background-color: transparent;
+            svg path{
+              fill: black;
+            }
           }
         }
       }
@@ -88,6 +84,11 @@ $breakdown-mobile: 319px;
         border: none;
         font-size: 24px;
         cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 11;
 
         @media (max-width: $breakdown-tablet) {
           display: block;
@@ -96,8 +97,8 @@ $breakdown-mobile: 319px;
     }
 
     .right img {
-      height: 50px;
-      margin-right: 50px;
+      height: 40px;
+      margin-right: 10px;
 
       @media (max-width: $breakdown-tablet) {
         display: none;
@@ -111,11 +112,11 @@ $breakdown-mobile: 319px;
 
     @media (max-width: $breakdown-tablet) {
       padding: 0;
-      display: none; // Hidden unless toggled open
+      display: none;
     }
 
     &.show {
-      display: block; // Display the navbar when the menu is toggled
+      display: block;
     }
 
     .dropdowns {
@@ -203,4 +204,3 @@ $breakdown-mobile: 319px;
     }
   }
 }
-
