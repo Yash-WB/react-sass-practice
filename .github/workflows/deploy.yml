@@ -24,14 +24,4 @@ jobs:
           docker build -t your-dockerhub-username/react-app:latest .
           docker push your-dockerhub-username/react-app:latest
 
-      - name: SSH into server and update container
-        uses: appleboy/ssh-action@v0.1.6
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          script: |
-            docker pull your-dockerhub-username/react-app:latest
-            docker stop react-app-container || true
-            docker rm react-app-container || true
-            docker run -d --name react-app-container -p 3000:3000 your-dockerhub-username/react-app:latest
+      
